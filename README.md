@@ -4,8 +4,8 @@ A web app where D stands for Diary.
 User can store & share past experiences, recent events, thoughts, memories, quotes & much more including pictures & dates with the d-log community.
 
 
-![Screenshot](./public/photos/homeimg.png?raw=true "Screenshot")
-![Screenshot](./public/photos/img2.png?raw=true "Screenshot")
+![Screenshot](./public/photos/h1.jpg?raw=true "Screenshot")
+![Screenshot](./public/photos/h2.jpg?raw=true "Screenshot")
 
 
 ## Features of the Website -
