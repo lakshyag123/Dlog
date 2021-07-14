@@ -1,0 +1,89 @@
+<%- include ("partials/homeheader") %>
+<nav class="bd-navbar navbar has-shadow is-spaced" role="navigation" aria-label="main navigation" >
+    <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io" style="padding: 0 0 0;">
+        <img src="/photos/logo.png" id="logo">
+      </a>
+     
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fab fa-lg fa-github-alt"></i>
+        </span>
+      </a>
+  
+      <!-- <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
+        <span class="icon" style="color: #55acee;">
+          <i class="fab fa-lg fa-twitter"></i>
+        </span>
+      </a> -->
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" style="margin-right: 5%;">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+     <div class="navbar-start" id="home">
+         <a class="navbar-item" href="/secrets"> 
+          <i class="fas fa-home" style="color: #C83516;"></i><strong>Home</strong> 
+        </a>
+  
+        <a class="navbar-item" href="/blogs">  <i class="fas fa-globe-americas" style="color: #24C816;"></i>
+       <strong> Contributions</strong>  
+        </a> 
+        <a class="navbar-item" href="/blogs/new"> <i class="fas fa-plus" style="color: blueviolet;"></i>
+         <strong> Create</strong>   
+          </a> 
+         <!-- <a class="navbar-item">  <i class="fas fa-user-alt" style="color: #A3AB13;"></i> 
+            Profile
+          </a> -->
+      </div>
+      <div class="navbar-end">
+        <a class="bd-navbar-icon navbar-item" href="https://github.com/jgthms/bulma" target="_blank" id="hide">
+            <span class="icon" style="color: #333;">
+              <i class="fab fa-lg fa-github-alt"></i>
+            </span>
+          </a>
+    
+          <!-- <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank" id="hide">
+            <span class="icon" style="color: #55acee;">
+              <i class="fab fa-lg fa-twitter"></i>
+            </span>
+          </a> -->
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-danger" href="/logout" role="button"><i class="fas fa-sign-out-alt"></i>
+              <strong>Log Out</strong>
+            </a>
+            <!-- <a class="button is-light" href="/logout" role="button"><i class="fas fa-sign-in-alt"></i>
+              Log Out
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </nav>
+
+  
+<form action="/blogs" method="POST" class="ui form container" enctype="multipart/form-data" style="margin-top: 2%;">
+    <div class="field">
+        <label style="font-size: 19px;font-family: 'Roboto', sans-serif;"><strong>Title :</strong> </label>
+        <input class="input is-info" name="title" type="text" placeholder="Title / Heading" required style="font-family: 'PT Serif', serif;font-size: 17px;box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);">
+        
+    </div>
+    <div class="field">
+        <label style="font-size: 19px;font-family: 'Roboto', sans-serif;"><strong>Content :</strong> </label>
+    <textarea class="textarea is-success" name="content" placeholder="Share Your Experiences, Thoughts & Memories..." style="font-family: 'PT Serif', serif;font-size: 17px;" required></textarea>
+       
+    </div>
+
+    <label for="img" style="font-size: 18px;font-family: 'Roboto', sans-serif;">Upload Image(if any) :</label>
+    <input type="file" id="img" name="file">
+    <br><br>
+    <button type="submit" class="button is-primary is-rounded">Publish</button>
+</form>
+
+<%- include ("partials/footer") %>
